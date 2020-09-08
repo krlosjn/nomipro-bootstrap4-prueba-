@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <title>Formulario Administrar empleado</title>
+</head>
+<body>
+
+<h1 class="container" style="text-align: center;">Administrar empleado</h1>
+
+
+<!--barra de navegación-->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-ligth" >
+    <!--vamos a crear un botón que nos permita contraer los link en un botón cuando se achica la pantalla-->
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   
+     <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <!-- vamos a crear una lista que contenga los menús desplegables dropdown, dentro de la fila ul creamos todas la listas-->
+   
+         <ul class="navbar-nav">
+             <li class="nav-item dropdown">
+                      <!--colocamos el encabezdo del dropdown con el elemento a-->
+                   <a class="nav-link dropdown-toggle text-white"  href="#" id="navbardrop" data-toggle="dropdown">
+                      Gestión de empleados
+                   </a>
+   
+                     <!--vamos a colocar las opciones dentro del menú desplegable-->
+                    <div class="dropdown-menu">
+                     <a class="dropdown-item" href="Administrar empleado Formulario.html">Administrar empleado</a>
+                     <a class="dropdown-item" href="Cargos formulario.html">Cargo</a>
+                     <a class="dropdown-item" href="tipo de vinculacion formulario.html">Tipo de vinculacion</a> 
+                   </div>
+               </li>
+   
+              <!--segundo elemento de la barra de navegación-->  
+              <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop" data-toggle="dropdown">
+                     Gestión de tiempos
+                   </a>
+   
+                   <!--opciones dentro del menú-->
+                  <div class="dropdown-menu"> 
+                   <a class="dropdown-item" href="Administrar tiempo formulario.html">Administrar tiempo</a>
+                   <a class="dropdown-item" href="parafiscales formulario.html">parafiscales</a>
+                   <a class="dropdown-item" href="Horas extras formulario.html">Horas extras</a>
+   
+                  </div>
+              </li>
+   
+               <!--tercer elemento de la barra de navegación-->
+               <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle text-white  "  href="#" id="navbardrop" data-toggle="dropdown">
+                    Administrar nómina
+                 </a>
+   
+                  <!-- opciones del menú para administrar nómina-->
+                   <div class="dropdown-menu">
+                       <a class="dropdown-item" href="gestion 1.html">Administrar empleado</a>
+                       <a class="dropdown-item" href="gestion 2.html">Administrar tiempos</a>
+                   
+       
+                   </div>
+               
+   
+               </li>
+   
+           </ul>
+     </div>
+
+      <!--vamos a crear un botón que me retorno al inicio de la página-->
+      <a href="Untitled-1.html" class="btn" type="button" style="background-color:rgb(11, 184, 141); ;">inicio</a>
+      <br>
+   
+   <!--vamos a crear un botón de búsqueda dentro de la barra de navegacion-->
+   <form class="form-inline" action="/action_page.php">
+       <input class="form-control mr-sm-2 " type="text" placeholder="Search">
+       <button class="btn " style="background-color: rgb(11, 184, 141);" type="submit">Buscar</button>
+     </form>
+   
+
+      
+   
+   </nav>
+
+
+
+
+<!--fin barra de navegación-->
+
+
+
+<!--utilizamos elemento form para poder crear nuestros formularios-->
+<div class="row container" style="text-align: center;">
+    <div class="col col-6" >
+      <form class="form-group">
+
+        <div class="container">
+            <div class="container p-3 my-2 border">
+                <div class="form-group">
+                    <label for="text">id empleado</label>
+                    <input type="text" class="form-control" placeholder="Ingrese id_empleado">
+                  </div>
+      
+                  <div class="form-group">
+      
+                      <label for="text">Nombre empleado</label>
+                      <input type="text" class="form-control" placeholder="Nombre">
+                  </div>
+      
+                  <div class="form-group">
+      
+                      <label for="text">Apellido empleado</label>
+                      <input type="text" class="form-control" placeholder="Apellido">
+                  </div>
+      
+                  <div class="form-group">
+      
+                      <label for="text">Correo electrónico</label>
+                      <input type="email" class="form-control" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                      <label for="text">Teléfono</label>
+                      <input type="text" class="form-control" placeholder="Teléfono">
+                  </div>
+      
+                  <div class="form-group">
+      
+                      <label for="text">Número documento</label>
+                      <input type="text" class="form-control" placeholder="Documento">
+                  </div>
+
+
+            </div>
+
+        </div>
+      </form>
+
+                     
+                  
+    </div>
+
+
+
+             <!--segunda parte del formulario para quepa mejor-->
+          
+              <div class="col col-6" >
+                  <form class="form-group" >
+                      <div class="container">
+                          <div class="p-3 my-2 border">
+                            <div>
+                                <label for="text">id cargo</label>
+                                <input type="text" class="form-control" placeholder="id cargo">
+                              </div>
+                               
+                              <div class="form-group">
+                                  <label for="tipo de documento">Tipo de documento</label>
+                                  <select name="tipo de documento" class="custom-select">
+                                      <option selected>Tipo de documento</option>
+                                      <option value="Cedula ciudadania">Cedula</option>
+                                      <option value="Cedula extranjería">cedula extranjería</option>
+                                      <option value="Otro">Otro</option>
+                                    </select>
+                  
+                  
+                              </div>
+                  
+                              
+                              <div class="form-group">
+                                  <label for="tipo de vinculación">Tipo de vinculación</label>
+                                  <select name="Tipo de vinculación" class="custom-select">
+                                      <option selected>Tipo de vinculación</option>
+                                      <option value="prestacion de servicios">Prestación de servicios</option>
+                                      <option value="obra labor">Obra labor</option>
+                                      <option value="termino fijo">Termino fijo</option>
+                                      <option value="termino indefinido">Termino indefinido</option>
+                                  </select>
+                  
+                              </div>
+                  
+                              <div class="form-group">
+                                  <label for="Estado">Estado</label>
+                                  <select name="Estado" class="custom-select">
+                                      <option selected>Estado</option>
+                                      <option value="prestacion de servicios">Activo</option>
+                                      <option value="prestacion de servicios">No activo</option>
+                                  </select>
+                  
+                              </div>
+        
+                        </div>
+        
+                    </div>
+
+                          </div>
+
+
+                      </div>
+
+                       
+                   </form>
+                   
+
+           
+                    
+                </div>
+
+
+  <!--botón para registrar información del formulario-->
+
+</div>
+
+    
+</body>
+</html>
